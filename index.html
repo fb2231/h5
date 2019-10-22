@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>时钟</title>
+	<script type="text/javascript">
+		function disptime(){
+			var today = new Date();
+			var hh = today.getHours();
+			var mm = today.getMinutes();
+			var ss = today.getSeconds();
+			document.getElementById("myclock").innerHTML = "<h1>现在是："+ hh + ":" + mm + ":" + ss + "</h1>";
+		}
+		function interval(){
+			setInterval("disptime()",1000);
+		}
+	</script>
+</head >
+<body onload="interval()">
+	<div id="myclock"></div>
+</body>
+</html>
